@@ -69,7 +69,7 @@ export default class App extends Component {
         type='div'
         tranref={this.state.tranref}
         currency={"NGN"}
-        description={"test"}
+        description={"shopping"}
         country={"NG"}
         clientappcode="app1"
         public_key={this.state.public_key}
@@ -78,7 +78,7 @@ export default class App extends Component {
         scriptStatus={this.checkProgress}
         amount={this.state.amount}
         tag={"button"}
-        full_name={"John Doe"}
+        full_name={"James Brown"}
         email={"a@b.com"}
         mobile_no={"00000000000"}
         customization={this.state.customization}

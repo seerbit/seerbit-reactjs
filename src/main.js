@@ -25,6 +25,7 @@ class SeerbitCheckout extends React.Component {
       country: this.props.country,
       amount: this.props.amount,
       callbackurl: this.props.callbackurl,
+      callback: this.props.callback,
       public_key: this.props.public_key,
       full_name: this.props.full_name,
       email: this.props.email,
