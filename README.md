@@ -10,13 +10,13 @@
 # Seerbit Checkout Wrapper for ReactJS
 
 # Requirements
-This module was built and tested using React 15.0.0 - 16.0.0
+This module was built and tested using React 15.0.0 - 18.0.0
 
 ## Get Started
 
 A simple way to add Seerbit to your React application
 
-[![NPM](https://img.shields.io/npm/v/react-seerbit.svg)](https://www.npmjs.com/package/react-seerbit) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-seerbit.svg)](https://www.npmjs.com/package/seerbit-reactjs) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
