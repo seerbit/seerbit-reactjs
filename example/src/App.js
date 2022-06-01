@@ -14,7 +14,7 @@ export default class App extends Component {
           background_color: "#004C64",
           button_color: "#0084A0",
         },
-        payment_method: ["card", "account", "transfer", "wallet"],
+        payment_method: ["card", "account", "transfer", "wallet", "ussd"],
         display_fee: true, // true 
         display_type: "embed", //inline
         logo: "logo_url | base64", 
@@ -53,7 +53,7 @@ export default class App extends Component {
         email={"a@b.com"}
         mobile_no={"00000000000"}
         customization={this.state.customization}
-        version={"1"}
+        version={"2"}
         title={'Pay with SeerBit'}
       />
     );
