@@ -1,6 +1,6 @@
 {
   "name": "seerbit-reactjs",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Seerbit ReactJS Wrapper for quick integration",
   "author": "seerbit",
   "license": "MIT",
@@ -27,7 +27,7 @@
     "prop-types": "^15.5.4"
   },
   "peerDependencies": {
-    "react": "^15.0.0 || ^16.0.0"
+    "react": "^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
