@@ -18,7 +18,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "npm run lint && rollup -c --environment NODE_ENV:production",
+    "build": "rollup -c --environment NODE_ENV:production",
     "start": "rollup -c -w",
     "lint": "eslint --fix --ext=js ./src",
     "prepack": "npm run build"
