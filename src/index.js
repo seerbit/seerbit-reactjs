@@ -41,7 +41,9 @@ class SeerbitCheckout extends React.Component {
       email: this.props.email,
       mobile_no: this.props.mobile_no,
       customization: this.props.customization,
-      clientappcode: this.props.clientappcode
+      clientappcode: this.props.clientappcode,
+      tokenize: this.props.tokenize,
+      planId: this.props.planId
     }
 
     window.SeerbitPay(seerbitOptions, this.props.callback, this.props.close)
@@ -84,7 +86,9 @@ SeerbitCheckout.propTypes = {
   full_name: PropTypes.string,
   email: PropTypes.string,
   mobile_no: PropTypes.string,
-  customization: PropTypes.object
+  customization: PropTypes.object,
+  planId: PropTypes.string,
+  tokenize: PropTypes.bool
 }
 
 SeerbitCheckout.defaultProps = {
