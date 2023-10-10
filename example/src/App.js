@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import SeerbitCheckout from "./dist/index.es";
+import logo from "./logo.svg";
+import "./App.css";
+import {
+  Button,
+  useSeerbitPayment,
+  SeerbitButton,
+} from "@amoskeyz/temp-react-lib";
 
-const App = () => {
-  const close = (close) => {
-    console.log(close);
-  };
-  const callback = (response) => {
-    console.log(response);
-  };
-
-  const checkProgress = (progress) => {
-    console.log(progress);
-  };
-
+function App() {
   const options = {
-    public_key: "YOUR_PUBLIC_KEY",
+    public_key: "SBTESTPUBK_t4G16GCA1O51AV0Va3PPretaisXubSw1",
     amount: 100,
     tranref: new Date().getTime(),
+    currency: "NGN",
+    email: "test@mail.com",
+    full_name: "",
+    mobile_no: "",
+    description: "",
+    tokenize: false,
     planId: "",
     customization: {
       theme: {
@@ -31,32 +31,40 @@ const App = () => {
     },
   };
 
+  const close = (close) => {
+    console.log(close);
+  };
+  const callback = (response, closeCheckout) => {
+    console.log(response);
+
+    setTimeout(() => closeCheckout(), 2000);
+  };
+
+  const PayButton = () => {
+    const initializePayment = useSeerbitPayment({
+      ...options,
+      callback,
+      close,
+    });
+    return <button onClick={initializePayment}>Pay</button>;
+  };
+
+  const paymentProps = {
+    ...options,
+    callback,
+    close,
+  };
+
   return (
-    <SeerbitCheckout
-      className="btn seerbit-btn"
-      type="div"
-      tranref={options.tranref}
-      currency={"NGN"}
-      description={"test"}
-      country={"NG"}
-      clientappcode="app1"
-      public_key={options.public_key}
-      callback={callback}
-      close={close}
-      scriptStatus={checkProgress}
-      amount={options.amount}
-      tag={"button"}
-      full_name={"John Doe"}
-      email={"a@b.com"}
-      mobile_no={"00000000000"}
-      tokenize={false}
-      customization={options.customization}
-      version={"2"}
-      title={"Pay with SeerBit"}
-      planId={options.planId}
-    />
+    <div className="App">
+      {/* <PayButton /> */}
+      <SeerbitButton
+        text="test payment"
+        className="app-btn"
+        {...paymentProps}
+      />
+    </div>
   );
-};
+}
 
-
-export default App
+export default App;
