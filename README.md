@@ -45,8 +45,6 @@ Add Seerbit to your projects:
 2. As a React Button Component
    <br/>
    <br/>
-   <br/>
-   <br/>
 
 ### As React Hook
 ```jsx
