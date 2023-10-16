@@ -4,7 +4,7 @@ import {
   Button,
   useSeerbitPayment,
   SeerbitButton,
-} from "@amoskeyz/temp-react-lib";
+} from "seerbit-reactjs";
 
 function App() {
   const options = {
