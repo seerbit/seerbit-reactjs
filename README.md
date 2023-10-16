@@ -48,6 +48,7 @@ Add Seerbit to your projects:
 
 ### As React Hook
 ```jsx
+
 import React, { Component } from "react";
 import { useSeerbitPayment } from "seerbit-reactjs"
 
@@ -81,17 +82,14 @@ const App = () => {
   const close = (close) => {
     console.log(close);
   };
+
   const callback = (response, closeCheckout) => {
     console.log(response);
 
     setTimeout(() => closeCheckout(), 2000);
   };
 
-   const initializePayment = useSeerbitPayment({
-      ...options,
-      callback,
-      close,
-    });
+   const initializePayment = useSeerbitPayment(options, callback, close);
 
 
   return (
