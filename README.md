@@ -83,7 +83,7 @@ const App = () => {
     console.log(close);
   };
 
-  const callback = (response, closeCheckout) => {
+  const callback = (response: any, closeCheckout: any) => {
     console.log(response);
 
     setTimeout(() => closeCheckout(), 2000);
@@ -141,7 +141,7 @@ const App = () => {
   const close = (close) => {
     console.log(close);
   };
-  const callback = (response, closeCheckout) => {
+  const callback = (response: any, closeCheckout: any) => {
     console.log(response);
 
     setTimeout(() => closeCheckout(), 2000);
