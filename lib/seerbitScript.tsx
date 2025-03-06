@@ -5,8 +5,8 @@ interface Script {
   error: boolean;
 }
 
-const useSeerbitScript = (scriptId: any) => {
-  const exists = document.getElementById(scriptId);
+const useSeerbitScript = (scriptId: string | number) => {
+  const exists = document.getElementById(String(scriptId));
   const scriptUrl = "https://checkout.seerbitapi.com/api/v2/seerbit.js";
 
   const [state, setState] = useState<Script>({
@@ -18,7 +18,7 @@ const useSeerbitScript = (scriptId: any) => {
     if (!exists) {
       const script = document.createElement("script");
       script.src = scriptUrl;
-      script.id = scriptId;
+      script.id = String(scriptId);
       script.async = true;
 
       const onLoadScript = (): void => {

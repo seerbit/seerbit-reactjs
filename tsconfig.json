@@ -24,5 +24,5 @@
     "baseUrl": "lib",
   },
   "include": ["lib"],
-  "exclude": ["node_modules", "dist", "rollup.config.js", "build", "example"]
+  "exclude": ["node_modules", "dist", "rollup.config.js", "build", "example1"]
 }

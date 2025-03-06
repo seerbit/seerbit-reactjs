@@ -1,11 +1,11 @@
 import { useEffect } from "react";
 import useSeerbitScript from "./seerbitScript";
-import { seerbitPay, seerbitPayTypes } from "./helpers";
+import { seerbitPay, seerbitPayTypes, responseType } from "./helpers";
 
 export default function initSeerbitPayment(
   payload: seerbitPayTypes,
-  callback: () => void,
-  close: () => void
+  callback?: (response: responseType, closeModal: () => void) => void,
+  close?: () => void
 ): () => void {
   const [error, loaded] = useSeerbitScript(payload.tranref);
 
@@ -23,7 +23,6 @@ export default function initSeerbitPayment(
     customization,
     tokenize,
     planId,
-    clientappcode,
     pocketId,
     vendorId,
   }: seerbitPayTypes = payload;
@@ -46,7 +45,6 @@ export default function initSeerbitPayment(
         email,
         mobile_no,
         customization,
-        clientappcode,
         tokenize,
         planId,
         pocketId,
