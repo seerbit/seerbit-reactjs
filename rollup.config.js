@@ -8,7 +8,7 @@ const packageJson = require("./package.json");
 export default [
   {
     input: "lib/index.ts",
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "react-refresh/runtime", "react-refresh", "'react/jsx-runtime'"],
     output: [
       {
         file: packageJson.main,
@@ -29,6 +29,6 @@ export default [
       commonjs(),
       typescript({ tsconfig: "./tsconfig.json" }),
     ],
-    external: ["react", "react-dom"],
+    external: ["react", "react-dom", "react-refresh/runtime", "react-refresh", "react/jsx-runtime"],
   },
 ];

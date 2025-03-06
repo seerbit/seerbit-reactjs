@@ -36,16 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-.app-btn {
-  height: 40px;
-  width: 250px;
-  border-radius: 5px;
-  background-color: #61dafb;
-  color: white;
-  border: none;
-}
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
